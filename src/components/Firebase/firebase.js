@@ -16,6 +16,7 @@ class Firebase {
     app.initializeApp(config);
 
     this.auth = app.auth();
+    this.db = app.database();
   }
 
   // *** Auth API ***
@@ -30,6 +31,10 @@ class Firebase {
   doPasswordReset = email => this.auth.sendPasswordResetEmail(email);
 
   doPasswordUpdate = password => this.auth.currentUser.updatePassword(password);
+
+  //Database API
+  sensor = sensorID => this.db.ref(`Sensors\`${sensorID}`); //Get reference of a specific sensor
+  sensors = () => this.db.ref("Sesnsors"); //List of all sensors
 }
 
 export default Firebase;

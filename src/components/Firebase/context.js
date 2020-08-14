@@ -6,4 +6,10 @@ const FirebaseContext = React.createContext(null);
 // once at thr top-level of the React component tree. The FirebaseContext.Consumer component is used to retrieve the Firebase instance if it
 //is needed in the React component.
 
+export const withFirebase = Component => props => (
+  <FirebaseContext.Consumer>
+    {firebase => <Component {...props} firebase={firebase} />}
+  </FirebaseContext.Consumer>
+);
+
 export default FirebaseContext;
