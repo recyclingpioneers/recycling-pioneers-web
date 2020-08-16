@@ -1,9 +1,11 @@
 import React from "react";
 import emailjs from "emailjs-com";
+import "./contact.css";
 
 const Contact = () => {
   function sendEmail(e) {
     e.preventDefault();
+
     emailjs
       .sendForm(
         "a.s.kalra1999@gmail.com",
@@ -80,7 +82,11 @@ const Contact = () => {
               </div>
 
               <div className="col-12 text-center">
-                <button className="btn btn-success" type="submit">
+                <button
+                  id="formSubmitBtn"
+                  className="btn btn-success"
+                  type="submit"
+                >
                   Send Message
                 </button>
               </div>

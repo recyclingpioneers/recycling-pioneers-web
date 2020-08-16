@@ -1,0 +1,12 @@
+@media (max-width: 991px) {
+  #cards {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  #cards {
+    font-size: 12px;
+    margin-bottom: 30px;
+  }
+}

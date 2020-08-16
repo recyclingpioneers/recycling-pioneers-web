@@ -1,5 +1,11 @@
 export const LANDING = "/";
-export const ADMIN = "/admin";
+export const STAFFLOGIN = "/stafflogin";
 export const ABOUT = "/about";
-export const DATA = "/data";
+export const PUBLICDATA = "/publicdata";
 export const CONTACT = "/contact";
+export const SIGNUP = "/signup";
+export const HOME = "/home";
+export const ADMIN = "/admin";
+export const MONITOR = "/mc";
+export const PASSWORDFORGET = "/passforget";
+export const PASSWORDCHANGE = "/passchange";
