@@ -28,10 +28,9 @@ class Firebase {
   doSignOut = () => this.auth.signOut();
 
   doPasswordReset = email => this.auth.sendPasswordResetEmail(email);
-
   doPasswordUpdate = password => this.auth.currentUser.updatePassword(password);
 
-  //Database API
+  // *** Database API ***
   sensor = sensorID => this.db.ref(`SensorInfo\`${sensorID}`); //Get reference of a specific sensor
   sensors = () => this.db.ref("SensorInfo"); //List of all sensors
 }

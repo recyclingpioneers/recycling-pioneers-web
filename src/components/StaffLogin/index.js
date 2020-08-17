@@ -70,7 +70,7 @@ class SignInFormBase extends Component {
                   Email:
                 </label>
                 <input
-                  class="form-control"
+                  className="form-control"
                   name="email"
                   value={email}
                   onChange={this.onChange}
@@ -86,7 +86,7 @@ class SignInFormBase extends Component {
                   Password:
                 </label>
                 <input
-                  class="form-control"
+                  className="form-control"
                   name="password"
                   value={password}
                   onChange={this.onChange}

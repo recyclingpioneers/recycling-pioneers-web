@@ -44,7 +44,7 @@ class PasswordChangeForm extends Component {
       <form onSubmit={this.onSubmit}>
         <div class="mb-3">
           <input
-            class="form-control"
+            className="form-control"
             name="passwordOne"
             value={passwordOne}
             onChange={this.onChange}
@@ -52,9 +52,9 @@ class PasswordChangeForm extends Component {
             placeholder="New Password"
           />
         </div>
-        <div class="mb-3">
+        <div className="mb-3">
           <input
-            class="form-control"
+            className="form-control"
             name="passwordTwo"
             value={passwordTwo}
             onChange={this.onChange}
