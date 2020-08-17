@@ -8,10 +8,10 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        "a.s.kalra1999@gmail.com",
+        "gmail",
         "official_template",
         e.target,
-        "user_R9oEF2TrTdL9Ax8tFGiJZ"
+        "user_bSNUNwa3cqIsxF9wPCvlH"
       )
       .then(
         result => {

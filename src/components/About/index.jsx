@@ -19,6 +19,7 @@ const About = () => {
               {TeamMemberData.map((val, ind) => {
                 return (
                   <TeamMemberCard
+                    className="display-1"
                     id="cards"
                     key={ind}
                     imgsrc={val.imgsrc}

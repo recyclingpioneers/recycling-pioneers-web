@@ -6,6 +6,9 @@
   box-sizing: border-box;
   font-family: mulish;
 }
+::-webkit-scrollbar {
+  display: none;
+}
 
 /** RESPONSIVE CODE 
 ===================================================================== */

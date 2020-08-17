@@ -14,7 +14,10 @@ const Objectives = props => {
         />
         <Card.Body>
           <div className="card-body">
-            <Card.Title className="text-center" style={{ fontWeight: "bold" }}>
+            <Card.Title
+              className="text-center"
+              style={{ fontWeight: "bold", fontSize: "1.2rem" }}
+            >
               {props.name}
             </Card.Title>
           </div>

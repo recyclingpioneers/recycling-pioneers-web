@@ -3,7 +3,6 @@ export const STAFFLOGIN = "/stafflogin";
 export const ABOUT = "/about";
 export const PUBLICDATA = "/publicdata";
 export const CONTACT = "/contact";
-export const SIGNUP = "/signup";
 export const HOME = "/home";
 export const ADMIN = "/admin";
 export const MONITOR = "/mc";

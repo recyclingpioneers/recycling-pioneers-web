@@ -2,17 +2,20 @@ import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import { compose } from "recompose";
 
-import { SignUpLink } from "../SignUp";
 import { PasswordForgetLink } from "../PasswordForget";
 import { withFirebase } from "../Firebase";
 import * as ROUTES from "../../constants/routes";
+import "./index.css";
 
 const SignInPage = () => (
   <div>
-    <h1>Staff Login</h1>
+    <div className="my-5">
+      <h1 className="text-center">Staff Login</h1>
+    </div>
     <SignInForm />
-    <PasswordForgetLink />
-    <SignUpLink />
+    <div className="my-3 text-center">
+      <PasswordForgetLink />
+    </div>
   </div>
 );
 
@@ -55,27 +58,59 @@ class SignInFormBase extends Component {
     const isInvalid = password === "" || email === "";
 
     return (
-      <form onSubmit={this.onSubmit}>
-        <input
-          name="email"
-          value={email}
-          onChange={this.onChange}
-          type="text"
-          placeholder="Email Address"
-        />
-        <input
-          name="password"
-          value={password}
-          onChange={this.onChange}
-          type="password"
-          placeholder="Password"
-        />
-        <button disabled={isInvalid} type="submit">
-          Sign In
-        </button>
+      <div className="container contact_div">
+        <div className="row">
+          <div className="col-md-6 col-10 mx-auto">
+            <form onSubmit={this.onSubmit}>
+              <div className="mb-3">
+                <label
+                  htmlFor="exampleFormControlInput1"
+                  className="form-label"
+                >
+                  Email:
+                </label>
+                <input
+                  class="form-control"
+                  name="email"
+                  value={email}
+                  onChange={this.onChange}
+                  type="email"
+                  placeholder="james@mcgill.ca"
+                />
+              </div>
+              <div className="mb-3">
+                <label
+                  htmlFor="exampleFormControlInput1"
+                  className="form-label"
+                >
+                  Password:
+                </label>
+                <input
+                  class="form-control"
+                  name="password"
+                  value={password}
+                  onChange={this.onChange}
+                  type="password"
+                  placeholder="charlotte123"
+                />
+              </div>
 
-        {error && <p>{error.message}</p>}
-      </form>
+              {error && <p className="alert-danger">{error.message}</p>}
+
+              <div className="col-12 text-center">
+                <button
+                  id="signinBtn"
+                  className="btn btn-success"
+                  disabled={isInvalid}
+                  type="submit"
+                >
+                  Log In
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
     );
   }
 }

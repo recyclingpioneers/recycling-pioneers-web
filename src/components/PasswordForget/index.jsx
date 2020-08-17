@@ -1,12 +1,14 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-
+import "./index.css";
 import { withFirebase } from "../Firebase";
 import * as ROUTES from "../../constants/routes";
 
 const PasswordForgetPage = () => (
   <div>
-    <h1>PasswordForget</h1>
+    <div className="my-5">
+      <h1 className="text-center">Forgot Password</h1>
+    </div>
     <PasswordForgetForm />
   </div>
 );
@@ -48,20 +50,40 @@ class PasswordForgetFormBase extends Component {
     const isInvalid = email === "";
 
     return (
-      <form onSubmit={this.onSubmit}>
-        <input
-          name="email"
-          value={this.state.email}
-          onChange={this.onChange}
-          type="text"
-          placeholder="Email Address"
-        />
-        <button disabled={isInvalid} type="submit">
-          Reset My Password
-        </button>
-
-        {error && <p>{error.message}</p>}
-      </form>
+      <div className="container contact_div">
+        <div className="row">
+          <div className="col-md-6 col-10 mx-auto">
+            <form onSubmit={this.onSubmit}>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">
+                  Please enter the email address associated with your account.
+                  If your account exists, you'll recieve an email to change your
+                  password:
+                </label>
+                <input
+                  class="form-control"
+                  name="email"
+                  value={this.state.email}
+                  onChange={this.onChange}
+                  type="email"
+                  placeholder="Email Address"
+                />
+              </div>
+              {error && <p style={{ color: "red" }}>{error.message}</p>}
+              <div className="col-12 text-center">
+                <button
+                  id="forgotBtn"
+                  className="btn btn-success"
+                  disabled={isInvalid}
+                  type="submit"
+                >
+                  Reset My Password
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
     );
   }
 }

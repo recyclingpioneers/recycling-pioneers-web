@@ -23,8 +23,8 @@ const NavigationAuth = () => {
         <div className="col-10 mx-auto">
           <nav className="navbar sticky-top navbar-expand-md navbar-light">
             <div className="container-fluid">
-              <NavLink className="navbar-brand" to={ROUTES.LANDING}>
-                <img src={logo} width="210" height="86" alt="" loading="lazy" />
+              <NavLink className="navbar-brand pt-3" to={ROUTES.LANDING}>
+                <img src={logo} width="130" alt="rp_logo_long" loading="lazy" />
               </NavLink>
               <button
                 className="navbar-toggler"
@@ -104,8 +104,8 @@ const NavigationNonAuth = () => {
         <div className="col-10 mx-auto">
           <nav className="navbar sticky-top navbar-expand-md navbar-light">
             <div className="container-fluid">
-              <NavLink className="navbar-brand" to={ROUTES.LANDING}>
-                <img src={logo} width="210" height="86" alt="" loading="lazy" />
+              <NavLink className="navbar-brand pt-3" to={ROUTES.LANDING}>
+                <img src={logo} width="130" alt="" loading="lazy" />
               </NavLink>
               <button
                 className="navbar-toggler"

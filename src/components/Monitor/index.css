@@ -1,0 +1,17 @@
+.my-container {
+  height: 100vh;
+  width: 100vh;
+  border: 8px solid green;
+}
+
+.carousel-item {
+  max-height: 65vh;
+}
+.carousel-item img {
+  max-height: 65vh;
+}
+
+.card-row {
+  background-color: white;
+  max-height: 35vh;
+}

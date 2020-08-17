@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 
+import "./index.css";
 import { withFirebase } from "../Firebase";
 
 const INITIAL_STATE = {
@@ -41,25 +42,37 @@ class PasswordChangeForm extends Component {
 
     return (
       <form onSubmit={this.onSubmit}>
-        <input
-          name="passwordOne"
-          value={passwordOne}
-          onChange={this.onChange}
-          type="password"
-          placeholder="New Password"
-        />
-        <input
-          name="passwordTwo"
-          value={passwordTwo}
-          onChange={this.onChange}
-          type="password"
-          placeholder="Confirm New Password"
-        />
-        <button disabled={isInvalid} type="submit">
-          Reset My Password
-        </button>
-
-        {error && <p>{error.message}</p>}
+        <div class="mb-3">
+          <input
+            class="form-control"
+            name="passwordOne"
+            value={passwordOne}
+            onChange={this.onChange}
+            type="password"
+            placeholder="New Password"
+          />
+        </div>
+        <div class="mb-3">
+          <input
+            class="form-control"
+            name="passwordTwo"
+            value={passwordTwo}
+            onChange={this.onChange}
+            type="password"
+            placeholder="Confirm New Password"
+          />
+        </div>
+        {error && <p className="alert-danger">{error.message}</p>}
+        <div className="col-12 text-center">
+          <button
+            id="submitBtn"
+            className="btn btn-success "
+            disabled={isInvalid}
+            type="submit"
+          >
+            Reset My Password
+          </button>
+        </div>
       </form>
     );
   }

@@ -64,8 +64,3 @@
     transform: translateY(-10px);
   }
 }
-
-.landingBtn:hover {
-  background: white !important;
-  color: #46cd0c !important;
-}

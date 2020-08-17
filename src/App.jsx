@@ -10,12 +10,10 @@ import StaffLoginPage from "./components/StaffLogin";
 import AboutPage from "./components/About";
 import PublicDataPage from "./components/PublicData";
 import ContactPage from "./components/Contact";
-import SignUpPage from "./components/SignUp";
 import HomePage from "./components/Home";
 import AdminPage from "./components/Admin";
 import MonitorPage from "./components/Monitor";
 import PasswordForgetPage from "./components/PasswordForget";
-import PasswordChangePage from "./components/PasswordChange";
 
 //import Footer from "./components/Footer";
 
@@ -32,7 +30,6 @@ const App = () => (
       <Route exact path={ROUTES.ABOUT} component={AboutPage} />
       <Route exact path={ROUTES.PUBLICDATA} component={PublicDataPage} />
       <Route exact path={ROUTES.CONTACT} component={ContactPage} />
-      <Route exact path={ROUTES.SIGNUP} component={SignUpPage} />
       <Route exact path={ROUTES.HOME} component={HomePage} />
       <Route exact path={ROUTES.ADMIN} component={AdminPage} />
       <Route exact path={ROUTES.MONITOR} component={MonitorPage} />
@@ -41,12 +38,6 @@ const App = () => (
         exact
         path={ROUTES.PASSWORDFORGET}
         component={PasswordForgetPage}
-      />
-
-      <Route
-        exact
-        path={ROUTES.PASSWORDCHANGE}
-        component={PasswordChangePage}
       />
     </div>
   </Router>
