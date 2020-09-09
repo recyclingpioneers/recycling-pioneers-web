@@ -1,22 +1,24 @@
 import React from "react";
-import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import ContactUs from "../Contact";
+import About from "../About";
+import Footer from "../Footer";
 
 //import { withFirebase } from "../Firebase";
 import logo from "../../assets/rp_logo.png";
 import "./landing.css";
 import Objective from "./Objective";
-//import waste from "../../assets/waste_icon.png";
-//import educate from "../../assets/educate_icon.png";
-//import audit from "../../assets/audit_icon.png";
+import contaminate from "../../assets/contamination_icon.png";
+import educate from "../../assets/educate_icon.png";
+import optomize from "../../assets/optomize_icon.png";
 
 const Landing = () => {
   return (
     <>
-      <section id="header" className="d-flex text-center">
+      <section id="header" className="d-flex text-center mb-3">
         <div className="container-fluid ">
           <div className="row mx-auto">
-            <div className="col-sm-8 col-md-6 col-lg-4 header-img mx-auto">
-              <img src={logo} className="img-fluid" alt="home img" />
+            <div className="col-sm-8 col-md-6 col-lg-4 mx-auto my-5">
+              <img src={logo} className="img-fluid animated" alt="home img" />
             </div>
 
             <div className="row justify-content-center">
@@ -40,20 +42,39 @@ const Landing = () => {
               </div>
             </div>
 
-            <div className="row justify-content-center gy-4 mx-auto my-2">
+            <div className="row justify-content-center gy-4 mx-auto my-2 ">
               <div className="col-md-3 col-sm-4">
-                <Objective name="Higher Accuracy Waste Audits" />
+                <Objective
+                  name="Reducing the Recycling Contimanation Rate"
+                  imgsrc={contaminate}
+                />
               </div>
               <div className="col-md-3 col-sm-4">
-                <Objective name="Educate & Encourage McGill" />
+                <Objective
+                  name="Optimize Waste Management Operations"
+                  imgsrc={optomize}
+                />
               </div>
               <div className="col-md-3 col-sm-4">
-                <Objective name="Increased Waste Diversion Rates" />
+                <Objective
+                  name="Educate Community on Sustainable Waste Practices"
+                  imgsrc={educate}
+                />
               </div>
             </div>
           </div>
         </div>
       </section>
+
+      <div className="my-spacer mt-5 py-5 mb-5">
+        <About />
+      </div>
+
+      <section className="mt-5 pb-5">
+        <ContactUs />
+      </section>
+
+      <Footer />
     </>
   );
 };

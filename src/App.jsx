@@ -11,9 +11,11 @@ import AboutPage from "./components/About";
 import PublicDataPage from "./components/PublicData";
 import ContactPage from "./components/Contact";
 import HomePage from "./components/Home";
+import HomeDetailsPage from "./components/Home";
 import AdminPage from "./components/Admin";
 import MonitorPage from "./components/Monitor";
 import PasswordForgetPage from "./components/PasswordForget";
+import TESTER from "./components/Tester";
 
 //import Footer from "./components/Footer";
 
@@ -26,19 +28,16 @@ const App = () => (
     <div>
       <Navigation />
       <Route exact path={ROUTES.LANDING} component={LandingPage} />
-      <Route exact path={ROUTES.STAFFLOGIN} component={StaffLoginPage} />
-      <Route exact path={ROUTES.ABOUT} component={AboutPage} />
-      <Route exact path={ROUTES.PUBLICDATA} component={PublicDataPage} />
-      <Route exact path={ROUTES.CONTACT} component={ContactPage} />
-      <Route exact path={ROUTES.HOME} component={HomePage} />
-      <Route exact path={ROUTES.ADMIN} component={AdminPage} />
-      <Route exact path={ROUTES.MONITOR} component={MonitorPage} />
-
-      <Route
-        exact
-        path={ROUTES.PASSWORDFORGET}
-        component={PasswordForgetPage}
-      />
+      <Route path={ROUTES.STAFFLOGIN} component={StaffLoginPage} />
+      <Route path={ROUTES.ABOUT} component={AboutPage} />
+      <Route path={ROUTES.PUBLICDATA} component={PublicDataPage} />
+      <Route path={ROUTES.CONTACT} component={ContactPage} />
+      <Route path={ROUTES.HOME} component={HomePage} />
+      <Route path={ROUTES.HOMEDETAILS} component={HomeDetailsPage} />
+      <Route path={ROUTES.ADMIN} component={AdminPage} />
+      <Route path={ROUTES.MONITOR} component={MonitorPage} />
+      <Route path={ROUTES.TESTER} component={TESTER} />
+      <Route path={ROUTES.PASSWORDFORGET} component={PasswordForgetPage} />
     </div>
   </Router>
 );

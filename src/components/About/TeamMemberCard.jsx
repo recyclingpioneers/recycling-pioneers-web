@@ -4,7 +4,7 @@ import { Card } from "react-bootstrap";
 const TeamMemberCard = props => {
   return (
     <>
-      <div className=" col-12 col-sm-6 col-md-3 mx-auto">
+      <div className="col-12 col-sm-6 col-md-3 mx-auto">
         <Card border="success">
           <Card.Img
             src={props.imgsrc}

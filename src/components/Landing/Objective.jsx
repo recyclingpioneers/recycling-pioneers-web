@@ -5,11 +5,11 @@ import "./landing.css";
 const Objectives = props => {
   return (
     <>
-      <Card border="success" className="obj-img img-fluid">
+      <Card className="obj-img img-fluid mx-auto d-block my-card ">
         <Card.Img
           src={props.imgsrc}
           variant="top"
-          className="card-img-top"
+          className="card-img-top landing-card mt-3"
           alt={props.imgsrc}
         />
         <Card.Body>

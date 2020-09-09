@@ -39,10 +39,6 @@
   color: white;
 }
 
-.header-img {
-  text-align: right;
-}
-
 #header .animated {
   animation: up-down 3s ease-in-out infinite alternate-reverse both;
 }
@@ -63,4 +59,19 @@
   100% {
     transform: translateY(-10px);
   }
+}
+
+.landing-card {
+  width: 15vh !important;
+  height: 100% !important;
+  object-fit: cover;
+}
+
+.my-card {
+  width: 21rem;
+  border: 2px solid #46cd0c !important;
+}
+
+.my-spacer {
+  background-color: #46cd0c3d;
 }

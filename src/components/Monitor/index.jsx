@@ -7,7 +7,7 @@ import sorting_poster from "../../assets/4_stream_sorting_poster.png";
 import educate_poster from "../../assets/educate_poster.png";
 import standard from "../../assets/signage_standardization.png";
 
-const Monitor = () => {
+const Monitor = props => {
   return (
     <>
       <div className="container-fluid my-container">
@@ -51,30 +51,35 @@ const Monitor = () => {
 
         <div className="row card-row mt-3 mb-2 gy-0">
           <div className="col-6 col-md-3 gy-0">
-            <DataCard border="dark" name="Landfill" distance="" weight="" />
-          </div>
-          <div className="col-6 col-md-3">
             <DataCard
-              border="primary"
-              name="Paper & Cardboard"
-              distance=""
-              weight=""
-            />
-          </div>
-          <div className="col-6 col-md-3">
-            <DataCard
-              border="warning"
-              name="Plastic, Glass & Metal"
-              distance=""
-              weight=""
+              border="dark"
+              name="Trash"
+              distance={props.WD}
+              weight={props.WW}
             />
           </div>
           <div className="col-6 col-md-3">
             <DataCard
               border="dark"
               name="Compostable"
-              distance="2.7"
-              weight="3.3"
+              distance={props.CD}
+              weight={props.CW}
+            />
+          </div>
+          <div className="col-6 col-md-3">
+            <DataCard
+              border="primary"
+              name="Paper & Cardboard"
+              distance={props.RD}
+              weight={props.RW}
+            />
+          </div>
+          <div className="col-6 col-md-3">
+            <DataCard
+              border="warning"
+              name="Plastic, Glass & Metal"
+              distance={props.PD}
+              weight={props.PW}
             />
           </div>
         </div>
