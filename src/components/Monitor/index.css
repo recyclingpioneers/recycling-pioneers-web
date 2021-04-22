@@ -1,4 +1,4 @@
-.my-container {
+/* .my-container {
   height: 100vh;
   width: 100vh;
   border: 8px solid green;
@@ -14,4 +14,11 @@
 .card-row {
   background-color: white;
   max-height: 35vh;
+} */
+.flexContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background:white;
+  height: 100vh;
 }

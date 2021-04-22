@@ -1,0 +1,9 @@
+.footerStyle{
+    background: green;
+}
+
+.footerText{
+    text-align: right;
+    color: white;
+    margin-top: 15px;
+}

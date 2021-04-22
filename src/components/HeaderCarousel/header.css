@@ -1,0 +1,51 @@
+.headerText {
+    font-size: 3em;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.rotatingText-adjective{
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    text-decoration: underline #81CE0C;
+}
+
+.rotatingText-adjective:nth-of-type(1) {
+    animation-name: rotate;
+    animation-duration: 5s;
+    animation-delay: 0.1s;
+  }
+  
+  .rotatingText-adjective:nth-of-type(2) {
+    animation-name: rotate-last;
+    animation-duration: 5s;
+    animation-delay: 5.1s;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes rotate {
+    0% {
+      opacity: 0;
+    }
+    
+    20%, 80% {
+      opacity: 1;
+    }
+    
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes rotate-last {
+    0% {
+      opacity: 0;
+    }
+    20%, 80% {
+        opacity: 1;
+      }
+    100% {
+      opacity: 1;
+    }
+  }
