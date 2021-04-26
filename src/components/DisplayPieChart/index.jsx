@@ -1,20 +1,14 @@
 import React, { useEffect, useState } from "react";
-import { VictoryPie, VictoryContainer } from "victory";
+import { VictoryPie } from "victory";
 import { withFirebase } from "../Firebase";
 
-//create a different file for FB data and import it. 
 const PieChartComponent = (props) => {
   const [chartData, setChartData] = useState([]);
-  const [wastedata, setData] = useState([]);
+  const [wastedata, setWastedata] = useState([]);
   
-//   const firebase = Firebase()
-
-  const fbfunc = (props) => {
-    //   const firebaseContext = FirebaseContext;
-    //   console.log(firebaseContext)
-      console.log(props.firebase.latestDataRef("trottier1050"))
+  const fbfunc = async(props) => {
     const fbData = props.firebase.latestDataRef("trottier1050")   
-    
+   
     fbData.on('value', snapshot => {
       let data = []; 
       let centData1 = snapshot.child('RD').val()+snapshot.child('CD').val()+snapshot.child('WD').val()+snapshot.child('PD').val();
@@ -23,7 +17,9 @@ const PieChartComponent = (props) => {
       data.push(Math.round((snapshot.child('CD').val()*100)/centData1));
       data.push(Math.round((snapshot.child('WD').val()*100)/centData1));
       data.push(Math.round((snapshot.child('PD').val()*100)/centData1));
-      setData(data);
+
+        setWastedata(data);
+        chart();
     })
   }
   
@@ -36,6 +32,8 @@ const PieChartComponent = (props) => {
     ]);
   };
 
+
+
   const legendStyle ={
     data: {
       fillOpacity: 0.9, stroke: "white", strokeWidth: 2
@@ -46,15 +44,18 @@ const PieChartComponent = (props) => {
   }
 
   useEffect(() => {
-    fbfunc(props);
+    if(wastedata.length==0){
+      fbfunc(props);
+    }
     chart();
-  });
-  return (
-        /* <Pie data={chartData} options={{legend:{labels:{fontSize:20, fontColor: "#606470", fontStyle:"bold"}}, tooltips:{enabled:false}}} height={100}/> */     
-        <div style={{height:"70%"}}>
-            <VictoryPie data={chartData} colorScale={["#0374BB", "#b26328","#040707", "#fbd506"]}  style={legendStyle} />
-        </div> 
+  },[wastedata]);
 
+  return (
+        <div style={{height:"70%"}}>
+            {wastedata.length>0 && chartData.length>0
+            ?<VictoryPie data={chartData} colorScale={["#0374BB", "#b26328","#040707", "#fbd506"]}  style={legendStyle} />
+            : <h3>LOADING...</h3>}
+        </div> 
   );
 };
 

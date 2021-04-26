@@ -1,11 +1,11 @@
 import React from "react";
 import { Carousel } from "react-bootstrap";
 import { withAuthorization } from "../Session";
-import DataCard from "./DataCard";
+// import DataCard from "./DataCard";
 import "./index.css";
-import sorting_poster from "../../assets/4_stream_sorting_poster.png";
-import educate_poster from "../../assets/educate_poster.png";
-import standard from "../../assets/signage_standardization.png";
+// import sorting_poster from "../../assets/4_stream_sorting_poster.png";
+// import educate_poster from "../../assets/educate_poster.png";
+// import standard from "../../assets/signage_standardization.png";
 import PieChart from "../DisplayPieChart";
 import WasteNumbers from "../DisplayWasteNumbers";
 import WasteFacts from "../DisplayWasteFacts";
@@ -37,12 +37,36 @@ const Monitor = props => {
             <WasteNumbers />
             <Footer />
           </div>
-        </Carousel.Item>
+        </Carousel.Item> 
 
         <Carousel.Item interval={10000}>
           <div className="flexContainer">
             <Header messageEN="Waste Facts" messageFR="Faits sur les déchets"/>
-            <WasteFacts imgSource = {fact1} />
+            <WasteFacts imgSource = {fact1} number= "0"/>
+            <Footer />
+          </div>
+        </Carousel.Item>
+
+       <Carousel.Item interval={10000}>
+          <div className="flexContainer">
+            <Header messageEN="Waste Facts" messageFR="Faits sur les déchets"/>
+            <WasteFacts imgSource = {fact2} number= "1"/>
+            <Footer />
+          </div>
+        </Carousel.Item>
+
+         <Carousel.Item interval={10000}>
+          <div className="flexContainer">
+            <Header messageEN="Waste Facts" messageFR="Faits sur les déchets"/>
+            <WasteFacts imgSource = {fact3} number= "2"/>
+            <Footer />
+          </div>
+        </Carousel.Item>
+
+         <Carousel.Item interval={10000}>
+          <div className="flexContainer">
+            <Header messageEN="Waste Facts" messageFR="Faits sur les déchets"/>
+            <WasteFacts imgSource = {fact4} number= "3" />
             <Footer />
           </div>
         </Carousel.Item>
@@ -50,7 +74,7 @@ const Monitor = props => {
         <Carousel.Item interval={10000}>
           <div className="flexContainer">
             <Header messageEN="Waste Facts" messageFR="Faits sur les déchets"/>
-            <WasteFacts imgSource = {fact2} />
+            <WasteFacts imgSource = {fact5} number= "4" />
             <Footer />
           </div>
         </Carousel.Item>
@@ -58,31 +82,7 @@ const Monitor = props => {
         <Carousel.Item interval={10000}>
           <div className="flexContainer">
             <Header messageEN="Waste Facts" messageFR="Faits sur les déchets"/>
-            <WasteFacts imgSource = {fact3} />
-            <Footer />
-          </div>
-        </Carousel.Item>
-
-        <Carousel.Item interval={10000}>
-          <div className="flexContainer">
-            <Header messageEN="Waste Facts" messageFR="Faits sur les déchets"/>
-            <WasteFacts imgSource = {fact4} />
-            <Footer />
-          </div>
-        </Carousel.Item>
-
-        <Carousel.Item interval={10000}>
-          <div className="flexContainer">
-            <Header messageEN="Waste Facts" messageFR="Faits sur les déchets"/>
-            <WasteFacts imgSource = {fact5} />
-            <Footer />
-          </div>
-        </Carousel.Item>
-
-        <Carousel.Item interval={10000}>
-          <div className="flexContainer">
-            <Header messageEN="Waste Facts" messageFR="Faits sur les déchets"/>
-            <WasteFacts imgSource = {fact6} />
+            <WasteFacts imgSource = {fact6} number= "5" />
             <Footer />
           </div>
         </Carousel.Item>
