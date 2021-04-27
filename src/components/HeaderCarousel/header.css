@@ -1,7 +1,9 @@
 .headerText {
     font-size: 3em;
     display: flex;
+    flex-direction: row;
     justify-content: flex-end;
+    text-decoration: underline #81CE0C;
 }
 
 .rotatingText-adjective{

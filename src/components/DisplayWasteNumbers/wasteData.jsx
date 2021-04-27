@@ -1,24 +1,40 @@
 const wasteData = [
-    {
-        _id: 1,
-        titleEN: "Top Waste Offender",
-        titleFR: "Délinquant Déchets Haut",
-        textEN: "1000 tonnes",
-        textFR: "1000 tonnes"
-    },
-    {
-        _id: 2,
-        titleEN: "Top Waste Generated at McGill",
-        titleFR: "Principaux déchets générés à McGill",
-        textEN: "1000 tonnes",
-        textFR: "1000 tonnes"
-    },{
-        _id: 3,
-        titleEN: "Top Waste Offender",
-        titleFR: "Délinquant Déchets Haut",
-        textEN: "Compost",
-        textFR: "Compost"
+     {
+        "EN":[{
+            _id: 1,
+            title: "Top Waste Offender",
+            text: "1000 tonnes"
+        },
+        {
+            _id: 2,
+            title: "Top Waste Generated at McGill",
+            text: "1000 tonnes"
+        },
+        {
+            _id: 3,
+            title: "Top Waste Offender",
+            text: "Compost"
+        }
+    ],
+
+        "FR":[{
+            _id: 1,
+            title: "Délinquant Déchets Haut",
+            text: "1000 tonnes"
+        },
+        {
+            _id: 2,
+            title:"Principaux déchets générés à McGill",
+            text: "1000 tonnes"
+        },
+        {
+            _id: 3,
+            title: "Délinquant Déchets Haut",
+            text: "Compost"
+        }
+    ]
     }
+
 ]
 
 export default wasteData;

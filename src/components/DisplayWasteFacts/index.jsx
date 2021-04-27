@@ -39,10 +39,10 @@ const WasteFacts = (props) => {
                             <Card.Body>
                             {(props.number==0 || props.number==1 || props.number==2) ? <Card.Text>
                                    {/* <pre style={thefacts}> */}
-                                   {facts[props.number].text}
+                                   {facts[0][props.lang][props.number].text}
                                    <br></br>
-                                   <span style={{color:facts[props.number].color, fontWeight:"bold"}}>
-                                   {facts[props.number].stats}
+                                   <span style={{color:facts[0][props.lang][props.number].color, fontWeight:"bold"}}>
+                                   {facts[0][props.lang][props.number].stats}
                                    </span> 
                                 </Card.Text> : <Card.Text></Card.Text>}
                             </Card.Body>
@@ -57,10 +57,10 @@ const WasteFacts = (props) => {
                             {(props.number==3 || props.number==4 || props.number==5) ?  
                                 <Card.Text>
                                    {/* <pre style={thefacts}> */}
-                                   {facts[props.number].text}
+                                   {facts[0][props.lang][props.number].text}
                                    <br></br>
-                                   <span style={{color:facts[props.number].color, fontWeight:"bold"}}>
-                                   {facts[props.number].stats}
+                                   <span style={{color:facts[0][props.lang][props.number].color, fontWeight:"bold"}}>
+                                   {facts[0][props.lang][props.number].stats}
                                    </span> 
                                 </Card.Text> : <Card.Text></Card.Text>}
                             </Card.Body>

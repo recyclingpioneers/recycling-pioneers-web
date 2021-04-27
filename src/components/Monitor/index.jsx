@@ -23,66 +23,129 @@ const Monitor = props => {
   return(
   
     <Carousel controls={true} indicators={false} slide={false} fade={true}>
-        <Carousel.Item interval={10000}>
+        <Carousel.Item interval={3000}>
           <div className="flexContainer">
-            <Header messageEN="Bin Status" messageFR="Statut Bin"/>
-              <PieChart />
+            <Header message="Bin Status"/> 
+            <PieChart />
             <Footer />
           </div>
         </Carousel.Item>
       
+        <Carousel.Item interval={3000}>
+          <div className="flexContainer">
+            <Header message="Statut Bin"/> 
+            <PieChart />
+            <Footer />
+          </div>
+        </Carousel.Item>
+        
         <Carousel.Item interval={10000}>
           <div className="flexContainer">
-            <Header messageEN="Help Us Divert More Waste" messageFR="Aidez-nous à détourner plus de déchets"/>
-            <WasteNumbers />
-            <Footer />
-          </div>
-        </Carousel.Item> 
-
-        <Carousel.Item interval={10000}>
-          <div className="flexContainer">
-            <Header messageEN="Waste Facts" messageFR="Faits sur les déchets"/>
-            <WasteFacts imgSource = {fact1} number= "0"/>
-            <Footer />
-          </div>
-        </Carousel.Item>
-
-       <Carousel.Item interval={10000}>
-          <div className="flexContainer">
-            <Header messageEN="Waste Facts" messageFR="Faits sur les déchets"/>
-            <WasteFacts imgSource = {fact2} number= "1"/>
-            <Footer />
-          </div>
-        </Carousel.Item>
-
-         <Carousel.Item interval={10000}>
-          <div className="flexContainer">
-            <Header messageEN="Waste Facts" messageFR="Faits sur les déchets"/>
-            <WasteFacts imgSource = {fact3} number= "2"/>
-            <Footer />
-          </div>
-        </Carousel.Item>
-
-         <Carousel.Item interval={10000}>
-          <div className="flexContainer">
-            <Header messageEN="Waste Facts" messageFR="Faits sur les déchets"/>
-            <WasteFacts imgSource = {fact4} number= "3" />
+            <Header message="Help Us Divert More Waste"/>
+            <WasteNumbers lang="EN"/>
             <Footer />
           </div>
         </Carousel.Item>
 
         <Carousel.Item interval={10000}>
           <div className="flexContainer">
-            <Header messageEN="Waste Facts" messageFR="Faits sur les déchets"/>
-            <WasteFacts imgSource = {fact5} number= "4" />
+            <Header message="Aidez-nous à détourner plus de déchets"/>
+            <WasteNumbers lang="FR"/>
+            <Footer />
+          </div>
+        </Carousel.Item>  
+
+        <Carousel.Item interval={5000}>
+          <div className="flexContainer">
+            <Header message="Waste Facts" />
+            <WasteFacts imgSource = {fact1} lang="EN" number= "0"/>
             <Footer />
           </div>
         </Carousel.Item>
 
-        <Carousel.Item interval={10000}>
+        <Carousel.Item interval={5000}>
           <div className="flexContainer">
-            <Header messageEN="Waste Facts" messageFR="Faits sur les déchets"/>
-            <WasteFacts imgSource = {fact6} number= "5" />
+            <Header message="Faits sur les déchets"/>
+            <WasteFacts imgSource = {fact1} lang="FR" number= "0"/>
+            <Footer />
+          </div>
+        </Carousel.Item>
+
+        <Carousel.Item interval={5000}>
+          <div className="flexContainer">
+            <Header message="Waste Facts"/>
+            <WasteFacts imgSource = {fact2} lang="EN" number= "1"/>
+            <Footer />
+          </div>
+        </Carousel.Item>
+        <Carousel.Item interval={5000}>
+          <div className="flexContainer">
+            <Header message="Faits sur les déchets"/>
+            <WasteFacts imgSource = {fact2} lang="FR" number= "1"/>
+            <Footer />
+          </div>
+        </Carousel.Item>
+
+        <Carousel.Item interval={5000}>
+          <div className="flexContainer">
+            <Header message="Waste Facts"/>
+            <WasteFacts imgSource = {fact3} lang="EN" number= "2"/>
+            <Footer />
+          </div>
+        </Carousel.Item>
+
+        <Carousel.Item interval={5000}>
+          <div className="flexContainer">
+            <Header message="Faits sur les déchets"/>
+            <WasteFacts imgSource = {fact3} lang="FR" number= "2"/>
+            <Footer />
+          </div>
+        </Carousel.Item>
+
+        <Carousel.Item interval={5000}>
+          <div className="flexContainer">
+            <Header message="Waste Facts"/>
+            <WasteFacts imgSource = {fact4} lang="EN" number= "3"/>
+            <Footer />
+          </div>
+        </Carousel.Item>
+
+         <Carousel.Item interval={5000}>
+          <div className="flexContainer">
+            <Header message="Faits sur les déchets"/>
+            <WasteFacts imgSource = {fact4} lang="FR" number= "3" />
+            <Footer />
+          </div>
+        </Carousel.Item>
+
+        <Carousel.Item interval={5000}>
+          <div className="flexContainer">
+            <Header message="Waste Facts" />
+            <WasteFacts imgSource = {fact5} lang="EN" number= "4" />
+            <Footer />
+          </div>
+        </Carousel.Item>
+
+        <Carousel.Item interval={5000}>
+          <div className="flexContainer">
+            <Header message="Faits sur les déchets"/>
+            <WasteFacts imgSource = {fact5} lang="FR" number= "4" />
+            <Footer />
+          </div>
+        </Carousel.Item>
+
+         <Carousel.Item interval={5000}>
+          <div className="flexContainer">
+            <Header message="Waste Facts"/>
+            <WasteFacts imgSource = {fact6} lang="EN" number= "5" />
+            <Footer />
+          </div>
+        </Carousel.Item>
+
+        <Carousel.Item interval={5000}>
+          <div className="flexContainer">
+            <Header message="Faits sur les déchets"/>
+            <WasteFacts imgSource = {fact6} lang="FR" number= "5" />
             <Footer />
           </div>
         </Carousel.Item>
