@@ -17,10 +17,6 @@ const Header = (props) => {
                 </Col> 
                 <Col className="headerText">
                   <img src={WasteIcon} alt="waste icon" width="80" height="80"/>
-                  {/* <div className="headerText">
-                      <span className="rotatingText-adjective">{props.messageEN}</span>
-                      <span className="rotatingText-adjective">{props.messageFR}</span>
-                    </div> */}
                   <p>{props.message}</p>
                   <img src={WasteIcon} alt="waste icon" width="80" height="80"/>
                 </Col>

@@ -6,6 +6,7 @@ const PieChartComponent = (props) => {
   const [chartData, setChartData] = useState([]);
   const [wastedata, setWastedata] = useState([]);
   
+  //Bin data from Firebase Real time database
   const fbfunc = async(props) => {
     const fbData = props.firebase.latestDataRef("trottier1050")   
    
@@ -23,6 +24,7 @@ const PieChartComponent = (props) => {
     })
   }
   
+  //Sets data and legend for the Pie Chart
   const chart = () => {
     setChartData([
       { x: `Paper/Cardboard \nPapier/Papier carton: \n${wastedata[0]}%`, y: wastedata[0] },
@@ -31,8 +33,6 @@ const PieChartComponent = (props) => {
       { x: `Plastic/Glass \nPlastique/Verre: \n${wastedata[3]}%`, y: wastedata[3] }
     ]);
   };
-
-
 
   const legendStyle ={
     data: {
@@ -60,5 +60,4 @@ const PieChartComponent = (props) => {
 };
 
 const PieChart = withFirebase(PieChartComponent)
-// export default PieChartComponent;
 export default PieChart;

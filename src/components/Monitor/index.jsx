@@ -39,7 +39,7 @@ const Monitor = props => {
           </div>
         </Carousel.Item>
         
-        <Carousel.Item interval={10000}>
+        <Carousel.Item interval={3000}>
           <div className="flexContainer">
             <Header message="Help Us Divert More Waste"/>
             <WasteNumbers lang="EN"/>
@@ -47,7 +47,7 @@ const Monitor = props => {
           </div>
         </Carousel.Item>
 
-        <Carousel.Item interval={10000}>
+        <Carousel.Item interval={3000}>
           <div className="flexContainer">
             <Header message="Aidez-nous à détourner plus de déchets"/>
             <WasteNumbers lang="FR"/>
@@ -55,7 +55,7 @@ const Monitor = props => {
           </div>
         </Carousel.Item>  
 
-        <Carousel.Item interval={5000}>
+        <Carousel.Item interval={3000}>
           <div className="flexContainer">
             <Header message="Waste Facts" />
             <WasteFacts imgSource = {fact1} lang="EN" number= "0"/>
@@ -63,7 +63,7 @@ const Monitor = props => {
           </div>
         </Carousel.Item>
 
-        <Carousel.Item interval={5000}>
+        <Carousel.Item interval={3000}>
           <div className="flexContainer">
             <Header message="Faits sur les déchets"/>
             <WasteFacts imgSource = {fact1} lang="FR" number= "0"/>
@@ -71,14 +71,15 @@ const Monitor = props => {
           </div>
         </Carousel.Item>
 
-        <Carousel.Item interval={5000}>
+        <Carousel.Item interval={3000}>
           <div className="flexContainer">
             <Header message="Waste Facts"/>
             <WasteFacts imgSource = {fact2} lang="EN" number= "1"/>
             <Footer />
           </div>
         </Carousel.Item>
-        <Carousel.Item interval={5000}>
+
+        <Carousel.Item interval={3000}>
           <div className="flexContainer">
             <Header message="Faits sur les déchets"/>
             <WasteFacts imgSource = {fact2} lang="FR" number= "1"/>
@@ -86,7 +87,7 @@ const Monitor = props => {
           </div>
         </Carousel.Item>
 
-        <Carousel.Item interval={5000}>
+        <Carousel.Item interval={3000}>
           <div className="flexContainer">
             <Header message="Waste Facts"/>
             <WasteFacts imgSource = {fact3} lang="EN" number= "2"/>
@@ -94,7 +95,7 @@ const Monitor = props => {
           </div>
         </Carousel.Item>
 
-        <Carousel.Item interval={5000}>
+        <Carousel.Item interval={3000}>
           <div className="flexContainer">
             <Header message="Faits sur les déchets"/>
             <WasteFacts imgSource = {fact3} lang="FR" number= "2"/>
@@ -102,7 +103,7 @@ const Monitor = props => {
           </div>
         </Carousel.Item>
 
-        <Carousel.Item interval={5000}>
+        <Carousel.Item interval={3000}>
           <div className="flexContainer">
             <Header message="Waste Facts"/>
             <WasteFacts imgSource = {fact4} lang="EN" number= "3"/>
@@ -110,7 +111,7 @@ const Monitor = props => {
           </div>
         </Carousel.Item>
 
-         <Carousel.Item interval={5000}>
+         <Carousel.Item interval={3000}>
           <div className="flexContainer">
             <Header message="Faits sur les déchets"/>
             <WasteFacts imgSource = {fact4} lang="FR" number= "3" />
@@ -118,7 +119,7 @@ const Monitor = props => {
           </div>
         </Carousel.Item>
 
-        <Carousel.Item interval={5000}>
+        <Carousel.Item interval={3000}>
           <div className="flexContainer">
             <Header message="Waste Facts" />
             <WasteFacts imgSource = {fact5} lang="EN" number= "4" />
@@ -126,7 +127,7 @@ const Monitor = props => {
           </div>
         </Carousel.Item>
 
-        <Carousel.Item interval={5000}>
+        <Carousel.Item interval={3000}>
           <div className="flexContainer">
             <Header message="Faits sur les déchets"/>
             <WasteFacts imgSource = {fact5} lang="FR" number= "4" />
@@ -134,7 +135,7 @@ const Monitor = props => {
           </div>
         </Carousel.Item>
 
-         <Carousel.Item interval={5000}>
+         <Carousel.Item interval={3000}>
           <div className="flexContainer">
             <Header message="Waste Facts"/>
             <WasteFacts imgSource = {fact6} lang="EN" number= "5" />
@@ -142,7 +143,7 @@ const Monitor = props => {
           </div>
         </Carousel.Item>
 
-        <Carousel.Item interval={5000}>
+        <Carousel.Item interval={3000}>
           <div className="flexContainer">
             <Header message="Faits sur les déchets"/>
             <WasteFacts imgSource = {fact6} lang="FR" number= "5" />
