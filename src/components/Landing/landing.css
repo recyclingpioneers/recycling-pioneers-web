@@ -1,5 +1,6 @@
 #header {
   width: 100%;
+  padding-top: 4%;
 }
 
 #header h1 {
@@ -73,5 +74,54 @@
 }
 
 .my-spacer {
-  background-color: #46cd0c3d;
+  background-color: #f1f1f1;
+  /* #E0E0E0; */
 }
+
+.imgcontainer {
+  position: relative;
+  text-align: center;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  
+  background-color: rgb(48, 86, 50);
+  opacity: 0.83;
+  color: white;
+  padding: 5%;
+  /* font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px; */
+}
+
+.imgcontainer .imgbtn:hover {
+  background-color: black;
+}
+
+.rowStyle {
+  display: flex;
+  justify-content:flex-start;
+  align-items: center;
+}
+
+ul {
+  list-style-type: none;
+  list-style-image: url('../../assets/WasteIcon.png');
+  list-style-position: inside;
+  text-align: justify;
+}
+
+#theBtns {
+  font-size: 1.5rem;
+}
+
+#theBtns:hover {
+    background: white;
+    color: #46cd0c;
+  }

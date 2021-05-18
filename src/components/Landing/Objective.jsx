@@ -5,7 +5,7 @@ import "./landing.css";
 const Objectives = props => {
   return (
     <>
-      <Card className="obj-img img-fluid mx-auto d-block my-card ">
+      <Card style={{background:"#46CD0C", paddingTop:"5%"}} className="obj-img img-fluid mx-auto d-block my-card ">
         <Card.Img
           src={props.imgsrc}
           variant="top"

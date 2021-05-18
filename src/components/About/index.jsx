@@ -9,7 +9,7 @@ const About = () => {
     <>
       <div className="mb-5">
         {" "}
-        <h1 className="text-center">Meet the Team</h1>
+        <h1 className="text-center">Meet the <span style={{color:"#46CD0C"}}>Team</span></h1>
       </div>
 
       <div className="container-fluid mb-4">

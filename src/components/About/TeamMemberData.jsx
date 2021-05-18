@@ -1,7 +1,7 @@
-import arneet from "../../assets/headshot_arneet.jpg";
-import misghana from "../../assets/headshot_misghana.jpg";
-import simina from "../../assets/headshot_simina.jpg";
-import kirk from "../../assets/headshot_kirk.jpg";
+import arneet from "../../assets/headshot_arneet.png";
+import misghana from "../../assets/headshot_misghana.png";
+import simina from "../../assets/headshot_simina.png";
+import kirk from "../../assets/headshot_kirk.png";
 
 const MemberInfo = [
   {
