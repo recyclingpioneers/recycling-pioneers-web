@@ -6,9 +6,6 @@ const BarGraphComponent = props => {
   const [chartData, setChartData] = useState([]);
   const [wastedata, setWastedata] = useState([]);
 
-  const [backgroundChartData, setBackgroundChartData] = useState([]);
-  const [fullData, setFullData] = useState([]);
-
   //Bin data from Firebase Real time database
   const fbfunc = async props => {
     const fbData = props.firebase.latestDataRef("trottier1050");
@@ -56,13 +53,6 @@ const BarGraphComponent = props => {
 
       setWastedata(data);
 
-      //Add Data for background chart:
-      let backgroundData = [];
-      for (let i = 0; i < numOfBins; i++) {
-        backgroundData.push(100);
-      }
-      setFullData(backgroundData);
-
       chart();
     });
   };
@@ -86,29 +76,6 @@ const BarGraphComponent = props => {
         //Plastic
         x: "Plastic/Glass \n Plastique/Verre \n",
         y: wastedata[2],
-        y0: 0
-      }
-      // { Compost not included yet },
-    ]);
-
-    //Data used for the background chart
-    setBackgroundChartData([
-      {
-        //Waste
-        x: "Waste \n Déchets \n",
-        y: fullData[1],
-        y0: 0
-      },
-      {
-        // Paper (recycling)
-        x: "Paper/Cardboard \n Papier/Papier carton \n",
-        y: fullData[0],
-        y0: 0
-      },
-      {
-        //Plastic
-        x: "Plastic/Glass \n Plastique/Verre \n",
-        y: fullData[2],
         y0: 0
       }
       // { Compost not included yet },
@@ -152,22 +119,41 @@ const BarGraphComponent = props => {
     <div style={{ height: "70%" }}>
       {wastedata.length > 0 && chartData.length > 0 ? (
         <VictoryGroup>
-          <VictoryChart domainPadding={60}>
+          <VictoryChart domainPadding={{ x: 60 }}>
             <VictoryBar
-              data={backgroundChartData}
+              data={[
+                {
+                  //Waste
+                  x: "Waste \n Déchets \n",
+                  y: 100,
+                  y0: 0
+                },
+                {
+                  // Paper (recycling)
+                  x: "Paper/Cardboard \n Papier/Papier carton \n",
+                  y: 100,
+                  y0: 0
+                },
+                {
+                  //Plastic
+                  x: "Plastic/Glass \n Plastique/Verre \n",
+                  y: 100,
+                  y0: 0
+                }
+              ]}
               barWidth={100}
-              domain={{ y: [0, 80] }} // Set y scale to 0 - 100
+              domain={{ y: [0, 100] }} // Set y scale to 0 - 100
               style={backgroundGraphStyle}
               cornerRadius={{ topLeft: 10, topRight: 10 }}
             />
           </VictoryChart>
 
-          <VictoryChart domainPadding={60}>
+          <VictoryChart domainPadding={{ x: 60 }}>
             <VictoryBar
               data={chartData}
               barWidth={100}
               labels={({ datum }) => `${datum.y}%`}
-              domain={{ y: [0, 80] }} // Set y scale to 0 - 100
+              domain={{ y: [0, 100] }} // Set y scale to 0 - 100
               style={graphStyle}
               cornerRadius={{ topLeft: 10, topRight: 10 }}
             />
