@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { VictoryGroup, VictoryChart, VictoryBar, VictoryTheme } from "victory";
+import { VictoryGroup, VictoryChart, VictoryBar } from "victory";
 import { withFirebase } from "../Firebase";
 
 const BarGraphComponent = props => {
@@ -71,15 +71,15 @@ const BarGraphComponent = props => {
   const chart = () => {
     setChartData([
       {
-        // Paper (recycling)
-        x: "Paper/Cardboard \n Papier/Papier carton \n",
-        y: wastedata[0],
-        y0: 0
-      },
-      {
         //Waste
         x: "Waste \n Déchets \n",
         y: wastedata[1],
+        y0: 0
+      },
+      {
+        // Paper (recycling)
+        x: "Paper/Cardboard \n Papier/Papier carton \n",
+        y: wastedata[0],
         y0: 0
       },
       {
@@ -94,15 +94,15 @@ const BarGraphComponent = props => {
     //Data used for the background chart
     setBackgroundChartData([
       {
-        // Paper (recycling)
-        x: "Paper/Cardboard \n Papier/Papier carton \n",
-        y: fullData[0],
-        y0: 0
-      },
-      {
         //Waste
         x: "Waste \n Déchets \n",
         y: fullData[1],
+        y0: 0
+      },
+      {
+        // Paper (recycling)
+        x: "Paper/Cardboard \n Papier/Papier carton \n",
+        y: fullData[0],
         y0: 0
       },
       {
@@ -152,20 +152,22 @@ const BarGraphComponent = props => {
     <div style={{ height: "70%" }}>
       {wastedata.length > 0 && chartData.length > 0 ? (
         <VictoryGroup>
-          <VictoryChart domainPadding={30}>
+          <VictoryChart domainPadding={60}>
             <VictoryBar
               data={backgroundChartData}
-              domain={{ y: [0, 100] }} // Set y scale to 0 - 100
+              barWidth={100}
+              domain={{ y: [0, 80] }} // Set y scale to 0 - 100
               style={backgroundGraphStyle}
               cornerRadius={{ topLeft: 10, topRight: 10 }}
             />
           </VictoryChart>
 
-          <VictoryChart domainPadding={30}>
+          <VictoryChart domainPadding={60}>
             <VictoryBar
               data={chartData}
+              barWidth={100}
               labels={({ datum }) => `${datum.y}%`}
-              domain={{ y: [0, 100] }} // Set y scale to 0 - 100
+              domain={{ y: [0, 80] }} // Set y scale to 0 - 100
               style={graphStyle}
               cornerRadius={{ topLeft: 10, topRight: 10 }}
             />
