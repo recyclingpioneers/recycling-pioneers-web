@@ -119,9 +119,38 @@ ul {
 
 #theBtns {
   font-size: 1.5rem;
+  margin-bottom:3%;
 }
 
 #theBtns:hover {
     background: white;
     color: #46cd0c;
+  }
+
+  /* Visibility */
+  @media screen and (max-width: 47.75em){
+    .hide-for-mobile{
+      /* hide for tablet and mobile */
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: 47em){
+    .hide-for-laptops{
+      /* hide for desktop viewports */
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 90.75em){
+    .hide-mission-mobile{
+      /* hide for tablet and mobile */
+      display: none;
+    }
+  }
+  @media screen and (min-width: 90.4em){
+    .hide-mission-laptops{
+      /* hide for desktop viewports */
+      display: none;
+    }
   }

@@ -18,7 +18,7 @@ const Navigation = () => (
 
 const NavigationAuth = () => {
   return (
-    <>
+    <div>
       <div className="container-fluid">
         <div className="col-10 mx-auto">
           <nav className="navbar sticky-top navbar-expand-md navbar-light">
@@ -93,13 +93,13 @@ const NavigationAuth = () => {
           </nav>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
 const NavigationNonAuth = () => {
   return (
-    <>
+    <div>
       <div className="container-fluid">
         <div className="col-10 mx-auto">
           <nav className="navbar sticky-top navbar-expand-md navbar-light">
@@ -165,7 +165,7 @@ const NavigationNonAuth = () => {
           </nav>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
