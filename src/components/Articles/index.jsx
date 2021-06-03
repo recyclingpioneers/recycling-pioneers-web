@@ -1,33 +1,32 @@
 import React from "react";
 import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import TeamMemberCard from "./TeamMemberCard";
-import TeamMemberData from "./TeamMemberData";
-import "./about.css";
+import ArticleCard from "./ArticleCard";
+import ArticleData from "./ArticleData";
+import "./article.css";
 
-const About = () => {
+const Articles = () => {
   return (
     <>
       <div className="mb-5">
         {" "}
-        <h1 className="text-center">
-          Meet the <span style={{ color: "#46CD0C" }}>Team</span>
-        </h1>
+        <h1 className="text-center">Some of Our Work</h1>
       </div>
 
       <div className="container-fluid mb-4">
         <div className="row">
           <div className="col-12 mx-auto px-4">
             <div className="row gy-4 gx-3">
-              {TeamMemberData.map((val, ind) => {
+              {ArticleData.map((val, ind) => {
                 return (
-                  <TeamMemberCard
+                  <ArticleCard
                     className="display-1"
                     id="cards"
                     key={ind}
                     imgsrc={val.imgsrc}
-                    name={val.name}
+                    article_headline={val.article_headline}
                     summary={val.summary}
-                    role={val.role}
+                    publisher={val.publisher}
+                    link={val.link}
                   />
                 );
               })}
@@ -39,4 +38,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Articles;

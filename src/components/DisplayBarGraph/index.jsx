@@ -15,7 +15,6 @@ const BarGraphComponent = props => {
 
       //Our measured bin height is 78cm
       const binHeight = 78;
-      const numOfBins = 3;
 
       //Get Reading Values
       //Values of Distances
