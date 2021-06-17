@@ -24,7 +24,7 @@ const NavigationAuth = () => {
           <nav className="navbar sticky-top navbar-expand-md navbar-light">
             <div className="container-fluid">
               <NavLink className="navbar-brand pt-3" to={ROUTES.LANDING}>
-                <img src={logo} width="130" alt="rp_logo_long" loading="lazy" />
+                <img src={logo} alt="rp_logo_long" loading="lazy" />
               </NavLink>
               <button
                 className="navbar-toggler"
@@ -105,7 +105,13 @@ const NavigationNonAuth = () => {
           <nav className="navbar sticky-top navbar-expand-md navbar-light">
             <div className="container-fluid">
               <NavLink className="navbar-brand pt-3" to={ROUTES.LANDING}>
-                <img src={logo} width="230" height="100%" alt="" loading="lazy" />
+                <img
+                  src={logo}
+                  width="230"
+                  height="100%"
+                  alt=""
+                  loading="lazy"
+                />
               </NavLink>
               <button
                 className="navbar-toggler"
