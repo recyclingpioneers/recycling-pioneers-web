@@ -47,8 +47,7 @@ const ArticleCard = props => {
               className="btn btn-success"
               onClick={e => {
                 e.preventDefault();
-                window.location.href =
-                  "https://giving.mcgill.ca/all-stories/smart-approach-examining-what-goes-waste-bins";
+                window.location.href = props.link;
               }}
             >
               Read Article
