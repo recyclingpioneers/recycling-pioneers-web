@@ -95,7 +95,7 @@ const Landing = () => {
               <Row className="rowStyle">
                 <Col style={{ marginBottom: "4%" }}>
                   <Objective
-                    name="Reducing the Recycling Contimanation Rate"
+                    name="Reducing the Recycling Contamination Rate"
                     imgsrc={contaminate}
                   />
                 </Col>
