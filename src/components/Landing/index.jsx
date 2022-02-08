@@ -40,11 +40,11 @@ const Landing = () => {
                   paddingBottom: "2%"
                 }}
               >
-                <em>We are designing a Smart Bin!</em>
+                <em>We are Designing a Smart Bin</em>
               </h2>
               <h4 style={{ fontSize: "1.5rem" }}>
                 Our goal is to improve waste habits at McGill University through
-                education and technology!
+                education and technology
               </h4>
               {/* <button>Button</button> */}
             </div>
@@ -74,19 +74,36 @@ const Landing = () => {
                   }}
                 >
                   At <strong className="brand-name">Recycling Pioneers</strong>,
-                  we aim to revolutionize the waste platform at McGill
-                  University. Driven by the common goals to improve waste habits
-                  at McGill, we joined forces with the{" "}
+                  our goal is to revolutionize the way McGill University manages its waste. 
+                  Ultimately, we hope to implement a comprehensive solution to the issue of 
+                  recycling contamination as well as not knowing how much waste is being recycled.
+                   Through this, we’re contributing to McGill’s goal of going zero waste by 2035.
+                </h2>
+                <br></br>
+                <h2
+                  style={{
+                    fontSize: "1.3rem",
+                    textAlign: "justify",
+                    margin: "0 5%"
+                  }}
+                >
+                Driven by the common goal of improving waste habits at McGill, we’ve joined forces with the
+                  {" "}
                   <strong className="brand-name">
                     Building and Grounds Department{" "}
                   </strong>
-                  to gather the data needed to make meaningful change. With
-                  smart waste systems to acquire data, we believe the impact
-                  systemic and public education can be tackled in a
-                  comprehensive way. As a response to this problem, we are
-                  developing and implementing a smart waste system that monitors
-                  waste disposal habits at McGill and educates the public about
-                  proper recycling.
+                  to gather data crucial to forming more concrete strategies for reducing and diverting waste.
+                </h2>
+                <br></br>
+                <h2
+                  style={{
+                    fontSize: "1.3rem",
+                    textAlign: "justify",
+                    margin: "0 5%"
+                  }}
+                >
+                We are currently developing a smart bin system that both monitors waste disposal habits 
+                and educates the public about proper recycling practices.
                 </h2>
               </div>
             </div>
@@ -95,19 +112,19 @@ const Landing = () => {
               <Row className="rowStyle">
                 <Col style={{ marginBottom: "4%" }}>
                   <Objective
-                    name="Reducing the Recycling Contimanation Rate"
+                    name="Reducing the Recycling Contamination Rate"
                     imgsrc={contaminate}
                   />
                 </Col>
                 <Col style={{ marginBottom: "4%" }}>
                   <Objective
-                    name="Optimize Waste Management Operations"
+                    name="Optimizing Waste Management Operations"
                     imgsrc={optomize}
                   />
                 </Col>
                 <Col style={{ marginBottom: "4%" }}>
                   <Objective
-                    name="Educate Community on Sustainable Waste Practices"
+                    name="Educating on Sustainable Waste Practices"
                     imgsrc={educate}
                   />
                 </Col>
@@ -153,7 +170,7 @@ const Landing = () => {
                       >
                         <p>
                           <span style={{ color: "#46CD0C" }}>Collect</span> data
-                          on waste and recycling at unique bin locations.
+                          on waste production and recycling rates across campus.
                         </p>
                       </Col>
                     </Row>
@@ -248,7 +265,7 @@ const Landing = () => {
                   >
                     <p>
                       <span style={{ color: "#46CD0C" }}>Collect</span> data on
-                      waste and recycling at unique bin locations.
+                      waste production and recycling rates across campus.
                     </p>
 
                     <p>
