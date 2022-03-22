@@ -9,4 +9,13 @@ Welcome to the Offical Recycling Pioneers Website Github Page. This repository i
 4) The contact page is using the EmailJS API to send emails.
 5) Google Sheets and Plotly will be used to visualize and store external data - Coming Soon.
 
+## To run website on local host, run command
+npn start
+
+## To build, run command
+npn run build
+
+## To deploy the website, run commamd
+firebase deploy
+
 ### If there are any bugs, comments, or suggestions please contact Arneet Kalra.
