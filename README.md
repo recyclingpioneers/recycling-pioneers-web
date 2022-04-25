@@ -10,10 +10,10 @@ Welcome to the Offical Recycling Pioneers Website Github Page. This repository i
 5) Google Sheets and Plotly will be used to visualize and store external data - Coming Soon.
 
 ## To run website on local host, run command
-npn start
+npm start
 
 ## To build, run command
-npn run build
+npm run build
 
 ## To deploy the website, run commamd
 firebase deploy
