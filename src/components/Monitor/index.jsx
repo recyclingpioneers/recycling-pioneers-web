@@ -6,6 +6,7 @@ import "./index.css";
 // import sorting_poster from "../../assets/4_stream_sorting_poster.png";
 // import educate_poster from "../../assets/educate_poster.png";
 // import standard from "../../assets/signage_standardization.png";
+import BinWeights from "../DisplayBinWeights";
 import PieChart from "../DisplayPieChart";
 import BarGraph from "../DisplayBarGraph";
 import WasteNumbers from "../DisplayWasteNumbers";
@@ -20,9 +21,26 @@ import fact5 from "../../assets/WasteFact5.png";
 import fact6 from "../../assets/WasteFact6.png";
 // import { import } from "mathjs";
 
-const Monitor = props => {
+const Monitor = (props) => {
   return (
     <Carousel controls={true} indicators={false} slide={false} fade={true}>
+      {/* Commented out all but the weight page, since that is all we need for the Aug 24 2022 demonstration */}
+      <Carousel.Item>
+        <div className="flexContainer">
+          <Header message="Bin Weights" />
+          <BinWeights />
+          <Footer />
+        </div>
+      </Carousel.Item>
+
+      {/* <Carousel.Item interval={3000}>
+        <div className="flexContainer">
+          <Header message="Bin Weights" />
+          <PieChart />
+          <Footer />
+        </div>
+      </Carousel.Item>
+
       <Carousel.Item interval={3000}>
         <div className="flexContainer">
           <Header message="Bin Status" />
@@ -165,12 +183,12 @@ const Monitor = props => {
           <WasteFacts imgSource={fact6} lang="FR" number="5" />
           <Footer />
         </div>
-      </Carousel.Item>
+      </Carousel.Item> */}
     </Carousel>
   );
 };
 
-const condition = authUser => !!authUser;
+const condition = (authUser) => !!authUser;
 
 export default Monitor;
 withAuthorization(condition)(Monitor);
