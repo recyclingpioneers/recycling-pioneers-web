@@ -2,15 +2,15 @@ import React, { useEffect, useState } from "react";
 import { VictoryPie } from "victory";
 import { withFirebase } from "../Firebase";
 
-const PieChartComponent = props => {
+const PieChartComponent = (props) => {
   const [chartData, setChartData] = useState([]);
   const [wastedata, setWastedata] = useState([]);
 
   //Bin data from Firebase Real time database
-  const fbfunc = async props => {
+  const fbfunc = async (props) => {
     const fbData = props.firebase.latestDataRef("trottier1050");
 
-    fbData.on("value", snapshot => {
+    fbData.on("value", (snapshot) => {
       let data = [];
 
       //Our measured bin height is 78cm
@@ -60,13 +60,13 @@ const PieChartComponent = props => {
     setChartData([
       {
         x: `Paper/Cardboard \nPapier/Papier carton: \n${wastedata[0]}%`,
-        y: wastedata[0]
+        y: wastedata[0],
       },
       { x: `Waste \nDéchets: \n${wastedata[1]}%`, y: wastedata[1] },
       {
         x: `Plastic/Glass \nPlastique/Verre: \n${wastedata[2]}%`,
-        y: wastedata[2]
-      }
+        y: wastedata[2],
+      },
       // { x: `Compost: \n${wastedata[1]}%`, y: wastedata[1] },
     ]);
   };
@@ -75,12 +75,12 @@ const PieChartComponent = props => {
     data: {
       fillOpacity: 0.9,
       stroke: "white",
-      strokeWidth: 2
+      strokeWidth: 2,
     },
     labels: {
       fontSize: 16,
-      fill: "black"
-    }
+      fill: "black",
+    },
   };
 
   useEffect(() => {
@@ -96,7 +96,7 @@ const PieChartComponent = props => {
         <VictoryPie
           data={chartData}
           padding={{ top: 60, bottom: 60 }}
-          colorScale={["#0374BB", "#040707", "#fbd506", "#b26328"]} //The fourth option is conpost
+          colorScale={["#0374BB", "#040707", "#fbd506", "#b26328"]} //The fourth option is compost
           style={legendStyle}
         />
       ) : (
