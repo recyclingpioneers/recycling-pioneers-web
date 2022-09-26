@@ -25,7 +25,7 @@ const Monitor = (props) => {
   return (
     <Carousel controls={true} indicators={false} slide={false} fade={true}>
       {/* Commented out all but the weight page, since that is all we need for the Aug 24 2022 demonstration */}
-      <Carousel.Item>
+      <Carousel.Item interval={3000}>
         <div className="flexContainer">
           <Header message="Bin Weights" />
           <BinWeights />
@@ -33,7 +33,7 @@ const Monitor = (props) => {
         </div>
       </Carousel.Item>
 
-      {/* <Carousel.Item interval={3000}>
+      <Carousel.Item interval={3000}>
         <div className="flexContainer">
           <Header message="Bin Weights" />
           <PieChart />
@@ -183,7 +183,7 @@ const Monitor = (props) => {
           <WasteFacts imgSource={fact6} lang="FR" number="5" />
           <Footer />
         </div>
-      </Carousel.Item> */}
+      </Carousel.Item>
     </Carousel>
   );
 };
